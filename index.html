@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>AirInternational</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <center><h1>AirNation Enroute</h1></center>
+            <nav class="navbar navbar-expand-lg  navbar-dark ">
+                <a class="navbar-brand" href="index.html">FlyAway to Destination</a>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link"  href="about.html">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Bookings.html">Bookings</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link"  href="Login.html">Login/Registration</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item active">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                    </ul>
+            </nav>
+        </nav>
+    </header>
+    <br>
+    <center> <h1>Sleeping in the clouds</h1>
+        <p>Our Boeing 737-MAX aircraft have a renewed business class experience: Dreams Business Class Fully reclining seats Experience comfort on another level: fully reclining seats that offer the comfort expected from the Dreams experience. USB ports and power outlets, a large tray table and plenty of storage space.State of the art entertainment system Latest generation 16-inch touch screens, with the latest entertainment on board, including: movies, series and music. Includes a personal remote with a 4.2-inch screen for easy access to unlimited content.</p></center>
+    <section>
+        <br>
+       <center><div id="main-container">
+            <label><h3>Choose Country : &nbsp;</h3></label><select id="countries-dropdown" ></select>
+        </div></center><br>
+        <script>
+            async function fetchCountries() {
+                try {
+                    const response = await fetch('https://restcountries.com/v3.1/all');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const countries = await response.json();
+                    const dropdown = document.getElementById('countries-dropdown');
+                    
+                    countries.forEach(country => {
+                        const option = document.createElement('option');
+                        option.textContent = country.name.common;
+                        option.value = country.name.common;
+                        dropdown.appendChild(option);
+                    });
+                } catch (error) {
+                    console.error('Error fetching countries:', error);
+                }
+            }
+            window.onload = fetchCountries;
+            const inputField = document.getElementById('myInput');
+            inputField.addEventListener('input', function() {
+                inputField.value = inputField.value.toUpperCase();
+            });
+        </script>
+        business class experience: Dreams Business Class Fully reclining seats Experience comfort on another level: fully reclining seats that offer the comfort expected from the Dreams experience. USB ports and power outlets, a large tray table and plenty of storage space.State of the art entertainment system Latest generation 16-inch touch screens, with the latest entertainment on board, including: movies, series and music. Includes a personal remote with a 4.2-inch screen for easy access to unlimited content.
+    </section>
+    <br>
+        <section id="features" class="py-5">
+            <div class="container">
+                <h2 class="text-center">Our Features</h2><br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img3.jpg" width="300px" height="300px" class="card-img-top" alt="Feature 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text">High Class Travel Experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img4.jpg" width="300px" height = "300px" class="card-img-top" alt="Feature 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text">You can easily Accsses with Mobile app.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img5.jpg" height="300px" width="300px" class="card-img-top" alt="Feature 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Feature 3</h5>
+                                <p class="card-text">Detailed description of feature 3.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img6.jpg" width="300px" height = "300px" class="card-img-top" alt="Feature 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text">This is our Business Class Servise</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img7.jpg" width="300px" height = "300px" class="card-img-top" alt="Feature 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text">Fly High With us.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-lg">
+                            <img src="Images/Img8.png" width="300px" height = "300px" class="card-img-top" alt="Feature 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Features</h5>
+                                <p class="card-text">Your saftey is in safe hands.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer>
+            <center><h4>Connect with Us</h4>
+                <p>&copy; 2024 Website. All Rights Reserved.</p>
+        </center>
+    </footer>
+
+</body>
+</html>
